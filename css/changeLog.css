@@ -8,6 +8,7 @@ body, html{
     max-width: 1180px;
     margin: 0 auto;
 }
+
 .sim-nav{
     width: 100%;
     height: 64px;
@@ -16,10 +17,9 @@ body, html{
     font-weight: 200;
     background-color: #fff;
 }
-.sim-nav .float-left{
-    float: left;
-}
+
 .sim-nav .title{
+    float: left;
     color: #3090e4;
     margin: 14px;
     font-weight: 400;
@@ -28,25 +28,25 @@ body, html{
 }
 
 
-.sim-nav .float-right{
+.sim-nav .nav-right{
     float: right;
 }
 .sim-nav .menu{
     margin: 0 1em;
     padding: 0;
 }
-.sim-nav .float-right .active{
+.sim-nav .nav-right .active{
     color: #91bef0;
     border-bottom: 4px solid #91bef0;
 }
-.sim-nav .float-right li{
+.sim-nav .nav-right li{
     height: 60px;
     color: #3090e4;
     font-size: 18px;
     display: inline-block;  //让块级元素显示在一行
     text-align: -webkit-match-parent;
 }
-.sim-nav .float-right a{
+.sim-nav .nav-right a{
     color: inherit;
     padding: 0 20px;
     line-height: 60px;
@@ -132,7 +132,29 @@ body, html{
 .sim-view .release-entry .entry-left{
     width: 20%;
     border-right: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
+.sim-view .entry-left span{
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 500;
+    color: #3090e4;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+.sim-view .entry-left a{
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 500;
+    color: #3090e4;
+    padding-right: 20px;
+    padding-top: 3px;
+}
+
+
 .sim-view .release-entry .entry-right{
     width: 80%;
 }
@@ -142,37 +164,25 @@ body, html{
     border: 1px solid #f0f0f0;
 }
 
-.sim-view .release-header{
-    display: flex;
-    flex-direction: column;
-    padding-top: 5px;
-}
-.sim-view .release-header .a-div a{
-    text-decoration: none;
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 500;
-    color: #3090e4;
-    padding-left: 10px;
-    float: left;
-}
 
-.sim-view .release-header p{
+.sim-view .entry-right p{
+    padding-top: 5px;
     text-align: left;
     padding-left: 10px;
-    margin: 5px;
-}
-.sim-view .details-of-operation span{
-    font-family: Poppins;
-    font-size: 15px;
-    font-weight: 500;
-    color: #565e64;
+    margin: 0;
 }
 .sim-view .details-of-operation a{
     text-decoration: none;
     font-family: Poppins;
     font-size: 15px;
     font-weight: 600;
+    color: #565e64;
+    padding-left: 0;
+}
+.sim-view .details-of-operation span{
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
     color: #565e64;
 }
 
@@ -183,56 +193,74 @@ body, html{
     font-weight: 500;
     color: #565e64;
 }
-
-
-.sim-view .user-reaction{
-    padding: 10px;
+.sim-view .changelist li span{
+    font-weight: bold;
+    padding-right: 5px;
 }
 
-.sim-view .user-reaction .comment-reactions{
+.sim-view .user-reactions{
     display: flex;
+    padding: 10px;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
 }
 
-.sim-view .statistics{
+.reaction-statistics .statistics{
     font-family: Poppins;
     font-size: 15px;
     font-weight: 500;
     color: #565e64;
     padding-left: 20px;
+    vertical-align: middle;
+}
+.reaction-statistics .plaintext{
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
+    color: #565e64;
+    vertical-align: middle;
 }
 
-.sim-view .user-reaction .comment-reactions .btn-link{
+.sim-view .user-reactions .reaction-item{
     border-radius: 25px;
-    border: 1px #0c4128;
+    border: none;
+    background-color: #f0f0f0;
     margin-left: 10px;
     padding: 3px 10px;
 }
-
-.sim-view .user-reaction .comment-reactions .btn-link svg{
+.sim-view .user-reactions .reaction-item:hover{
+    background-color: lightgrey;
+}
+.sim-view .user-reactions .reaction-item img{
     vertical-align: middle;
     width: 18px;
     height: 18px;
 }
-
-.sim-view .user-reaction .comment-reactions .btn-link span{
+.sim-view .user-reactions .reaction-item span{
     vertical-align: middle;
     font-size: 15px;
     padding-left: 5px;
 }
 
 
-.sim-view .user-reaction .dropdown summary{
+.sim-view .user-reactions .dropdown summary{
     list-style: none;
     border: none;
 }
- .sim-view .dropdown-icon svg{
+.sim-view .user-reactions .dropdown-sum img{
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+ .sim-view .dropdown-icon img{
+     width: 20px;
+     height: 20px;
      vertical-align: middle;
  }
 
-.sim-view .user-reaction .dropdown ul{
+.sim-view .user-reactions .dropdown ul{
     padding: 0;
     position: absolute;
     border-radius: 10px;
@@ -242,19 +270,21 @@ body, html{
     background-color: #fff;
     border: 1px solid lightgray;
 }
-.sim-view .user-reaction .dropdown li{
+.sim-view .user-reactions .dropdown li{
     list-style: none;
     padding: 5px 5px;
 }
-.sim-view .user-reaction .dropdown button{
+.sim-view .user-reactions .dropdown button{
     border: 0;
     border-radius: 10px;
     background-color: #fff;
 }
-.sim-view .user-reaction .dropdown button:hover{
+.sim-view .user-reactions .dropdown button:hover{
     background-color: #f0f0f0;
 }
-.sim-view .user-reaction .dropdown .dropdown-menu svg{
+.sim-view .user-reactions .dropdown .dropdown-menu img{
+    width: 22px;
+    height: 22px;
     padding: 5px 5px 2px 5px;
 }
 
