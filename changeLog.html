@@ -6,132 +6,193 @@
     <link rel="icon" href="image/logo.png">
     <link rel="stylesheet" href="css/changeLog.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
-<div class="changeLog">
-    <header class="sim-nav">
-        <div class="inner">
-            <p class="title">CSU-SIGN</p>
-            <div class="nav-right">
-                <ul class="nav-menu">
-                    <li class><a href="javascript:void(0)">主页</a></li>
-                    <li class><a href="javascript:void(0)">订阅</a></li>
-                    <li class="active"><a href="javascript:void(0)">更新日志</a></li>
-                </ul>
+<header class="sim-nav">
+    <div class="inner">
+        <p class="title">CSU-SIGN</p>
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li class><a href="javascript:void(0)">主页</a></li>
+                <li class><a href="javascript:void(0)">订阅</a></li>
+                <li class="active"><a href="javascript:void(0)">更新日志</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="inner">
+    <div class="sim-view">
+        <img src="image/logo.png" class="logo" alt="logo">
+        <h1> CSU-COVID-SIGN </h1>
+        <div class="notice-board">
+            <div class="container">
+                <div class="intro">
+                    <h1>Notice Board</h1>
+                    <p>Update: Version 2.3.1 --- Some introduction about the latest released version......</p>
+                    <a href="javascript:void(0)">Learn more</a>
+                </div>
             </div>
         </div>
-    </header>
 
-    <div class="sim-view">
-        <div class="inner">
-            <img src="image/logo.png" class="logo" alt="logo">
-            <h1> CSU-COVID-SIGN </h1>
-            <div class="notice-board">
-                <div class="container">
-                    <div class="intro">
-                        <h1>Notice Board</h1>
-                    </div>
-                    <div class="content">
-                        <p>Update: Version 2.3.1 --- Some introduction about the latest released version......</p>
-                        <a href="javascript:void(0)">Learn more</a>
-                    </div>
-                </div>
-            </div>
+        <div class="releases">
+            <h1 class="sub-nav">Releases</h1>
+            <div class="release-entry-list" id="release-list">
 
-            <div class="releases">
-                <div class="sub-nav">
-                    <h1>Releases</h1>
-                </div>
-                <div class="release-entry-list">
-                    <div class="release-entry" id="release-entry-1">
-                        <div class="entry-left">
-                            <span>Version</span><a class="version-id" href="javascript:void(0)">2.3.1</a>
-                        </div>
-                        <div class="entry-right">
-                            <p class="details-of-operation">
-                                <a class="author" href="https://wolfbolin.com/">WolfBolin</a>
-                                <span>releases this at</span>
-                                <span class="date">2018-03-23 16:03:51</span>
-                            </p>
-                            <ul class="changelist">
-                                <li><span class="change-label">Enhancement</span> Quick next & previous record in the form view</li>
-                                <li><span class="change-label">Feature</span> Feature request: i18n support</li>
-                                <li><span class="change-label">Bug</span> Date shows in grid is different from value in database</li>
-                            </ul>
-                            <hr/>
-                            <div class="user-reactions">
-                                <div class="reaction-statistics">
-                                    <span class="statistics">0</span>
-                                    <span class="plaintext">people reacted.</span>
-                                </div>
 
-                                <div class="reactions-options">
-                                    <button class="reaction-item" id="react-btn1" onclick="userReact1()">
-                                        <img class="emoji-option" src="image/EMOJI-1.png">
-                                        <span class="reaction-count" id="react-cnt1">0</span>
-                                    </button>
-                                    <button class="reaction-item">
-                                        <img class="emoji-option" id="react-btn2" src="image/EMOJI-2.png">
-                                        <span class="reaction-count" id="react-cnt2">0</span>
-                                    </button>
-                                    <button class="reaction-item">
-                                        <img class="emoji-option" id="react-btn3" src="image/EMOJI-3.png">
-                                        <span class="reaction-count" id="react-cnt3">0</span>
-                                    </button>
-                                    <button class="reaction-item">
-                                        <img class="emoji-option" id="react-btn4" src="image/EMOJI-4.png">
-                                        <span class="reaction-count" id="react-cnt4">0</span>
-                                    </button>
-                                </div>
-                                <details class="dropdown">
-                                    <summary class="dropdown-sum">
-                                        <img class="dropdown-icon" src="image/emoji-icon.png">
-                                    </summary>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <button class="dropdown-item" id="dropdown-btn1">
-                                                <img class="dropdown-option" src="image/EMOJI-1.png">
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button class="dropdown-item" id="dropdown-btn2">
-                                                <img class="dropdown-option" src="image/EMOJI-2.png">
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button class="dropdown-item" id="dropdown-btn3">
-                                                <img class="dropdown-option" src="image/EMOJI-3.png">
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button class="dropdown-item" id="dropdown-btn4">
-                                                <img class="dropdown-option" src="image/EMOJI-4.png">
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </details>
-                            </div>
-                            <hr/>
-                        </div>
-                    </div>
-                </div>
+                <!--                <div class="release-entry">-->
+                <!--                    <div class="entry-left">-->
+                <!--                        <div class="entry-text">-->
+                <!--                            <span>Version</span>-->
+                <!--                            <span>2.3.1</span>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="entry-right">-->
+                <!--                        <p class="details-of-operation">-->
+                <!--                            <a class="author" href="https://wolfbolin.com/">WolfBolin</a>-->
+                <!--                            <span>releases this at</span>-->
+                <!--                            <span class="date">2018-03-23 16:03:51</span>-->
+                <!--                        </p>-->
+                <!--                        <div class="changelist">-->
+                <!--                            <h3>[Enhancement]</h3>-->
+                <!--                            <ul class="enhancement">-->
+                <!--                                <li> Quick next & previous record in the form view</li>-->
+                <!--                                <li> Quick next & previous record in the form view</li>-->
+                <!--                                <li> Quick next & previous record in the form view</li>-->
+                <!--                            </ul>-->
+                <!--                        </div>-->
+                <!--                        <div class="user-reactions">-->
+                <!--                            <div class="reactions-options">-->
+                <!--                                <button class="reaction-item" id="react-btn1" onclick="userReact1()">-->
+                <!--                                    <img class="emoji-option" src="image/EMOJI-1.png">-->
+                <!--                                    <span class="reaction-count" id="react-cnt1">0</span>-->
+                <!--                                </button>-->
+                <!--                                <button class="reaction-item">-->
+                <!--                                    <img class="emoji-option" id="react-btn2" src="image/EMOJI-2.png">-->
+                <!--                                    <span class="reaction-count" id="react-cnt2">0</span>-->
+                <!--                                </button>-->
+                <!--                                <button class="reaction-item">-->
+                <!--                                    <img class="emoji-option" id="react-btn3" src="image/EMOJI-3.png">-->
+                <!--                                    <span class="reaction-count" id="react-cnt3">0</span>-->
+                <!--                                </button>-->
+                <!--                                <button class="reaction-item">-->
+                <!--                                    <img class="emoji-option" id="react-btn4" src="image/EMOJI-4.png" alt="">-->
+                <!--                                    <span class="reaction-count" id="react-cnt4">0</span>-->
+                <!--                                </button>-->
+                <!--                            </div>-->
+                <!--                            <details class="dropdown">-->
+                <!--                                <summary class="dropdown-sum">-->
+                <!--                                    <img class="dropdown-icon" src="image/emoji-icon.png" alt="">-->
+                <!--                                </summary>-->
+                <!--                                <ul class="dropdown-menu">-->
+                <!--                                    <li>-->
+                <!--                                        <button class="dropdown-item" id="dropdown-btn1">-->
+                <!--                                            <img class="dropdown-option" src="image/EMOJI-1.png">-->
+                <!--                                        </button>-->
+                <!--                                    </li>-->
+                <!--                                    <li>-->
+                <!--                                        <button class="dropdown-item" id="dropdown-btn2">-->
+                <!--                                            <img class="dropdown-option" src="image/EMOJI-2.png">-->
+                <!--                                        </button>-->
+                <!--                                    </li>-->
+                <!--                                    <li>-->
+                <!--                                        <button class="dropdown-item" id="dropdown-btn3">-->
+                <!--                                            <img class="dropdown-option" src="image/EMOJI-3.png">-->
+                <!--                                        </button>-->
+                <!--                                    </li>-->
+                <!--                                    <li>-->
+                <!--                                        <button class="dropdown-item" id="dropdown-btn4">-->
+                <!--                                            <img class="dropdown-option" src="image/EMOJI-4.png">-->
+                <!--                                        </button>-->
+                <!--                                    </li>-->
+                <!--                                </ul>-->
+                <!--                            </details>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+
             </div>
         </div>
     </div>
+    <button id="testButton">Add card</button>
 
 
     <footer class="sim-footer">
-        <div class="inner">
-            <div class="footer">
-                <p class="copyright"> CopyRight © 2020 WolfBolin. All Rights Reserved. </p>
-                <a href="http://www.miitbeian.gov.cn" class="icp">豫ICP备19033794号</a>
-            </div>
+        <div class="footer">
+            <p class="copyright"> CopyRight © 2020 WolfBolin. All Rights Reserved. </p>
+            <a href="http://www.miitbeian.gov.cn" class="icp">豫ICP备19033794号</a>
         </div>
     </footer>
 </div>
-</body>
 
+<div class="release-entry" id="release-demo" style="display: none">
+    <div class="entry-left">
+        <div class="entry-text">
+            <span>Version</span>
+            <span id="release-version">2.3.1</span>
+        </div>
+    </div>
+    <div class="entry-right">
+        <p class="details-of-operation">
+            <a class="author" href="https://wolfbolin.com/">WolfBolin</a>
+            <span>releases this at</span>
+            <span class="date" id="release-date">2018-03-23 16:03:51</span>
+        </p>
+        <div class="changelist" id="release-info">
+        </div>
+        <div class="user-reactions">
+            <div class="reactions-options">
+                <button class="reaction-item" id="react-like">
+                    <img class="emoji-option" src="image/EMOJI-1.png">
+                    <span class="reaction-count" id="react-cnt1">0</span>
+                </button>
+                <button class="reaction-item" id="react-good">
+                    <img class="emoji-option" src="image/EMOJI-2.png">
+                    <span class="reaction-count" id="react-cnt2">0</span>
+                </button>
+                <button class="reaction-item">
+                    <img class="emoji-option" id="react-btn3" src="image/EMOJI-3.png">
+                    <span class="reaction-count" id="react-cnt3">0</span>
+                </button>
+                <button class="reaction-item">
+                    <img class="emoji-option" id="react-btn4" src="image/EMOJI-4.png" alt="">
+                    <span class="reaction-count" id="react-cnt4">0</span>
+                </button>
+            </div>
+            <details class="dropdown">
+                <summary class="dropdown-sum">
+                    <img class="dropdown-icon" src="image/emoji-icon.png" alt="">
+                </summary>
+                <ul class="dropdown-menu">
+                    <li>
+                        <button class="dropdown-item" id="dropdown-btn1">
+                            <img class="dropdown-option" src="image/EMOJI-1.png">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" id="dropdown-btn2">
+                            <img class="dropdown-option" src="image/EMOJI-2.png">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" id="dropdown-btn3">
+                            <img class="dropdown-option" src="image/EMOJI-3.png">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" id="dropdown-btn4">
+                            <img class="dropdown-option" src="image/EMOJI-4.png">
+                        </button>
+                    </li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/changeLog.js"></script>
 </html>
